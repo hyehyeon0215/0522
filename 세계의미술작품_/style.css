@@ -1,0 +1,251 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul, li {list-style: none;}
+a {text-decoration: none; color: #333;}
+
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    min-height: 200px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 15px;
+    z-index: 10;
+    color: #333;
+    text-align: center;
+    display: none;
+}
+
+.popup h1 {
+    font: bold 24px/1 '맑은 고딕';
+    margin-bottom: 30px;
+}
+
+.popup p {
+    font: 16px/1.5 '맑은 고딕';
+    margin-bottom: 50px;
+}
+
+.popup button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 5px 15px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+header {
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+
+header h1 {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header #gnb {
+    position: absolute;
+    right: 200px;
+    top: 30%;
+    text-align: center;
+    z-index: 9;
+    /* transform: translateY(-50%); */
+}
+
+header #gnb>li {
+    float: left;
+    width: 150px;
+    height: 50px;
+    background-color: #333;
+}
+
+header #gnb>li>a {
+    color: #fff;
+}
+
+header #gnb>li:hover {
+    background-color: #fff;
+}
+
+header #gnb>li:hover>a {
+    color: #333;
+}
+
+#gnb>li>a {
+    width: 150px;
+    height: 100%;
+    font: bold 20px/50px '맑은 고딕';
+}
+
+.sub {
+    display: none;
+}
+
+.sub li {
+    width: 150px;
+    height: 50px;
+    background-color: #fff;
+}
+
+.sub li>a {
+    font: 18px/50px '맑은 고딕';
+}
+
+.sub li:hover {
+    background-color: #333;
+}
+
+.sub li:hover>a{
+    color: #fff;
+}
+
+
+#slide {
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#slide .frame {
+    width: 300px;
+    height: 900px;
+    position: relative;
+}
+
+
+#contentBox {
+    width: 100%;
+    height: 200px;
+}
+
+#contentBox .inner {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contentBox .inner article .tab {
+    width: 20%;
+    height: 40px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-bottom: -1px;
+    border-bottom: none;
+    background-color: #fff;
+}
+
+#contentBox .inner article .content {
+    width: 100%;
+    height: 150px;
+}
+
+#contentBox .inner .notice {
+    flex: 1.5;
+}
+
+#contentBox .inner .notice .content ul {
+    width: 100%;
+    height: 30px;
+}
+
+#contentBox .inner .notice ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contentBox .inner .notice ul li:hover {
+    background-color: #f8f8f8;
+}
+
+#contentBox .inner .notice ul li a {
+    font: 14px/30px '맑은 고딕';
+    margin-left: 5px;
+
+}
+
+#contentBox .inner .notice ul li span {
+    font: 14px/30px '맑은 고딕';
+    margin-right: 5px;
+}
+
+#contentBox .inner .notice .content {
+    border: 1px solid #000;
+}
+
+#contentBox .inner .gallery {
+    flex: 1;
+}
+#contentBox .inner .gallery .content {
+    border: 1px solid #000;
+    padding: 0 10px;
+}
+#contentBox .inner .gallery .content ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#contentBox .inner .banner {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    background: url(images/baro.jpg) no-repeat center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contentBox .inner .banner a p {
+    font: 16px/1 '맑은 고딕';
+    color: #fff;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #fdb7f8;
+}
+
+.footer_wrap {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_wrap .copyright {
+    text-align: center;
+    font: 14px/2 '맑은 고딕';
+    color: #333;
+}

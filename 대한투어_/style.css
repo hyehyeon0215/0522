@@ -1,0 +1,308 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul, li {list-style: none;}
+a {text-decoration: none; color: #333;}
+
+
+.popupBg {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    z-index: 10;
+    display: none;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 15px;
+    width: 600px;
+    min-height: 200px;
+    z-index: 11;
+    display: none;
+}
+
+.popup h1 {
+    font: bold 24px/1 '맑은 고딕';
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.popup p {
+    font: 18px/1.5 '맑은 고딕';
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.popup button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 5px 15px;
+    background-color: #333;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: #d5f0ff;
+}
+
+header h1 {
+    flex: 2.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .wrap {
+    flex: 4.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .wrap .gnbBg {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    height: 200px;
+    background-color: #1b1e54;
+    z-index: 8;
+    display: none;
+}
+
+header .wrap #gnb {
+    position: absolute;
+    top: 50px;
+    margin-right: 50px;
+    text-align: center;
+    z-index: 9;
+    text-align: center;
+}
+
+header .wrap #gnb>li {
+    float: left;
+    width: 150px;
+    position: relative;
+}
+
+header .wrap #gnb>li>a {
+    display: block;
+    width: 100%;
+    height: 50px;
+    font: bold 24px/50px '맑은 고딕';
+}
+
+header .wrap #gnb>li:hover>a {
+    background-color: #1b1e54;
+    color: #fff;
+}
+
+.sub {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    display: none;
+}
+
+.sub>li>a {
+    display: block;
+    width: 150px;
+    height: 50px;
+    font: 16px/50px '맑은 고딕';
+    background-color: #1b1e54;
+    color: #fff;
+}
+
+.sub>li:hover>a {
+    background-color: #fff;
+    color: #333;
+}
+
+#slide {
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#slide .frame {
+    position: relative;
+    display: flex;
+    width: 1200px;
+    height: 900px;
+}
+
+#contentBox {
+    width: 100%;
+    height: 200px;
+}
+
+#contentBox .inner {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contentBox article {
+    flex: 1;
+}
+
+#contentBox article .tab {
+    width: 20%;
+    height: 30px;
+    text-align: center;
+    font: 16px/30px '맑은 고딕';
+    border: 1px solid #000;
+    margin-bottom: -1px;
+    margin-left: 10px;
+    border-bottom: none;
+    z-index: 2;
+}
+
+#contentBox article .content {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    border: 1px solid #000;
+}
+
+.notice .content ul {
+    width: 100%;
+}
+
+.notice .content ul li{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notice .content ul li:hover {
+    background-color: #d5f0ff;
+}
+
+.notice .content ul li a {
+    margin-left: 5px;
+    font: 14px/30px '맑은 고딕';
+    color: #333;
+}
+
+.notice .content ul li span {
+    font: 12px/30px '맑은 고딕';
+    color: #333;
+    margin-right: 10px;
+}
+
+
+
+.gallery {
+    flex: 1;
+}
+
+.gallery .content {
+    padding: 20px;
+    gap: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.baro {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    background: url('images/baro.jpg') no-repeat center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.baro p:nth-of-type(1) {
+    font: 16px/1.5 '맑은 고딕';
+    color: #fff;
+}
+
+.baro p {
+    font: bold 18px/1.5 '맑은 고딕';
+    color: #fff;
+}
+
+.baro::after {
+    content: '>>>';
+    display: block;
+    position: absolute;
+    top: 65%;
+    color: #fff;
+}
+
+
+footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: #d5f0ff;
+}
+
+footer .copy {
+    flex: 4.5;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font: 16px/2 '맑은 고딕';
+    color: #333;
+}
+
+footer .footer_wrap {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.footer_wrap .sns {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.footer_wrap .sns a img {
+    filter: grayscale(1);
+}
+
+.footer_wrap .family_site {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
